@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="n1"> +
+    <input type="text" name="" id="n2">
+    <button onclick="somav()">somar</button>
+    <div id="result">
+        resultado vai aparecer aqui
+    </div>
+
+
+    <script>
+        function somav() {
+            var t1 = document.querySelector('input#n1');
+            var t2 = document.querySelector('input#n2');
+            var resultado = document.querySelector('div#result');
+            // usa o .value para acessar o valor contido no imput 
+            var n1 = Number(t1.value);
+            var n2 = Number(t2.value);
+            // é usado o Number() para converter de string para numero 
+            var soma = n1 + n2;
+            resultado.innerHTML = soma;
+
+        }
+    </script>
+</body>
+
+</html>

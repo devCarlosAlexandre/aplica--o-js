@@ -5,6 +5,7 @@ var buttonElement = document.querySelector('#app button');
 var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
 
 function renderTodos() {
+    //limpa o imput a cada laço
     listElement.innerHTML = '';
     for (todo of todos) {
 
@@ -24,8 +25,6 @@ function renderTodos() {
         todoElement.appendChild(todoText);
         todoElement.appendChild(linkElement);
         listElement.appendChild(todoElement);
-
-
 
     }
 }
@@ -47,6 +46,9 @@ function deletTodo(pos) {
     todos.splice(pos, 1);
     renderTodos();
     saveToStorage();
+    var n2;
+    var n1;
+    var resutado;
 
 }
 
